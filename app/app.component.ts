@@ -15,7 +15,11 @@ import { Meal } from './meal.model';
           [childMealList] = "allMeals"
         ></meal-list>
       </div>
-      <div class="col-sm-6"></div>
+      <div class="col-sm-6">
+        <add-meal
+          (addMealSender) = "addMeal($event)"
+        ></add-meal>
+      </div>
       <div class="col-sm-3 well"></div>
     </div>
   </div>
@@ -30,5 +34,9 @@ export class AppComponent {
     new Meal("Sizzle Pie", "Cannot get enough of The Ol Dirty", 600),
     new Meal("KURE", "Only skinny and young people work here to shame me", 200),
   ];
+
+  addMeal(addedMeal: Meal) {
+    this.allMeals.push(addedMeal);
+  }
 
 }
