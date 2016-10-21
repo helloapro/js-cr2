@@ -1,7 +1,27 @@
 .jumbotron {
+  background: url("../../resources/img/spaghetti.gif");
+  opacity: 0.5;
+  background-size: auto;
+  background-position: repeat;
+}
 
+.jumboheader {
+  text-align: center;
+  color: white !important;
+  text-shadow: 2px 2px black;
 }
 
 .jumbotext {
   font-style: italic;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.edit {
+  height: 20px;
+  width: auto;
+}
+
+.pull-right {
+  margin-right: 0.5em;
 }

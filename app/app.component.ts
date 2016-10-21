@@ -5,8 +5,8 @@ import { Meal } from './meal.model';
   selector: 'meal-tracker',
   template: `
   <div class="container">
-    <div class="jumbotron">
-      <h1 class="text-center">Meal Tracker - Meal Hacker</h1>
+    <div class="jumbotron jumboimage">
+      <h1 class="jumboheader">Meal Tracker - Meal Hacker</h1>
       <p class="jumbotext">"Ultimately, the most efficient way to live is like a snake - eat sparingly, do very little, & strike when the time is right..." ~ Confucius</p>
     </div>
     <div class="row">
@@ -15,7 +15,7 @@ import { Meal } from './meal.model';
           [childMealList] = "allMeals"
         ></meal-list>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 well add">
         <add-meal
           (addMealSender) = "addMeal($event)"
         ></add-meal>

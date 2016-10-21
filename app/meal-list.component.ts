@@ -9,6 +9,7 @@ import { MealComponent } from './meal.component';
       <meal-display
         [meal] = "meal"
       ></meal-display>
+      <br>
     </div>
   `
 })
