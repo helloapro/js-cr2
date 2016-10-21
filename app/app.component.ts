@@ -8,6 +8,12 @@ import { Meal } from './meal.model';
     <div class="jumbotron jumboimage">
       <h1 class="jumboheader">Meal Tracker - Meal Hacker</h1>
       <p class="jumbotext">"Ultimately, the most efficient way to live is like a snake - eat sparingly, do very little, & strike when the time is right..." ~ Confucius</p>
+      <div>
+        <meal-filter
+          [childTypeList]="allTypes"
+          (caloriesTypeSender)="selectCalories($event)"
+        ></meal-filter>
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-3 well fruit">
@@ -21,6 +27,7 @@ import { Meal } from './meal.model';
           [childMealList] = "allMeals"
           (clickEditMealSender) = "editMeal($event)"
           [childSelectedMeal] = "selectedMeal"
+          [childSelectedCalories] = "selectedCalories"
         ></meal-list>
       </div>
       <div class="col-sm-3 well cupcake">
@@ -40,6 +47,10 @@ export class AppComponent {
     new Meal("KURE", "Only skinny and young people work here to shame me", 200),
   ];
 
+  public allTypes: string[] = ["All meals", "Less than 500 calories", "500 calories or more"];
+
+  selectedType: string = "All meals";
+
   addMeal(addedMeal: Meal) {
     this.allMeals.push(addedMeal);
   }
@@ -47,6 +58,11 @@ export class AppComponent {
   selectedMeal: Meal = null;
   editMeal(mealToEdit: Meal) {
     this.selectedMeal = mealToEdit;
+  }
+
+  selectedCalories: string = "All meals";
+  selectCalories(caloriesType: string) {
+    this.selectedCalories = caloriesType;
   }
 
 }
