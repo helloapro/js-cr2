@@ -1,20 +1,33 @@
+body {
+  background-color: mistyrose;
+  background-size: auto;
+  background-position: repeat;
+}
+
+.well {
+  background-color: rgba(255,255,255,0.5);
+}
+
 .jumbotron {
   background: url("../../resources/img/spaghetti.gif");
-  opacity: 0.5;
+  /*opacity: .8;*/
   background-size: auto;
   background-position: repeat;
 }
 
 .jumboheader {
   text-align: center;
-  color: white !important;
-  text-shadow: 2px 2px black;
+  color: black !important;
+  text-shadow: 3px 3px white;
+  font-family: 'Shrikhand', sans-serif;
 }
 
 .jumbotext {
   font-style: italic;
+  font-family: 'Concert One', sans-serif;
+  font-size: 30px;
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 3px 3px black;
 }
 
 .edit {
@@ -24,4 +37,45 @@
 
 .pull-right {
   margin-right: 0.5em;
+}
+
+.fruit {
+  background: url("../../resources/img/fruit.jpeg");
+  background-size: contain;
+  height: 69em;
+}
+
+.fruit-text {
+  color: white;
+  font-family: 'Concert One', sans-serif;
+  text-shadow: 3px 3px black;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+.cupcake {
+  background: url("../../resources/img/cupcake.jpg");
+  background-size: contain;
+  height: 69em;
+}
+
+.cupcake-text, .fruit-header {
+  color: white;
+  font-family: 'Shrikhand', sans-serif;
+  text-shadow: 3px 3px black;
+  word-wrap: break-word;
+}
+
+.entry-header {
+  color: black;
+  font-family: 'Shrikhand', sans-serif;
+  text-shadow: 3px 3px white;
+  word-wrap: break-word;
+}
+
+.entry-text {
+  color: black;
+  font-family: 'Concert One', sans-serif;
+  font-size: 20px;
+  word-wrap: break-word;
 }

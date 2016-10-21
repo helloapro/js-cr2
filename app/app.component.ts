@@ -10,19 +10,22 @@ import { Meal } from './meal.model';
       <p class="jumbotext">"Ultimately, the most efficient way to live is like a snake - eat sparingly, do very little, & strike when the time is right..." ~ Confucius</p>
     </div>
     <div class="row">
-      <div class="col-sm-3 well">
+      <div class="col-sm-3 well fruit">
+        <add-meal
+          (addMealSender) = "addMeal($event)"
+        ></add-meal>
+      </div>
+      <div class="col-sm-6">
+        <h2 class="entry-header">Your entries</h2>
         <meal-list
           [childMealList] = "allMeals"
           (clickEditMealSender) = "editMeal($event)"
           [childSelectedMeal] = "selectedMeal"
         ></meal-list>
       </div>
-      <div class="col-sm-6 well add">
-        <add-meal
-          (addMealSender) = "addMeal($event)"
-        ></add-meal>
+      <div class="col-sm-3 well cupcake">
+        <h1 class="cupcake-text">The<br>PAANNNEELLLL<br>ooff<br>Teeemmmppptttaaatttiiiooonnn</h1>
       </div>
-      <div class="col-sm-3 well"></div>
     </div>
   </div>
   `

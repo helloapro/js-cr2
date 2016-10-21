@@ -6,7 +6,7 @@ import { EditMealComponent } from './edit-meal.component';
   selector: 'meal-display',
   inputs: ['meal'],
   template: `
-    <div class="row">
+    <div class="row well entry-text">
       <h4>
         {{ meal.name }}
         <button type="button" (click)="editMeal(meal)" class="btn btn-xs pull-right" data-toggle="modal" data-target="#myModal">
