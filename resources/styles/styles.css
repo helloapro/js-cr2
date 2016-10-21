@@ -75,7 +75,7 @@ textarea {
   font-family: 'Shrikhand', sans-serif;
   text-shadow: 3px 3px white;
   word-wrap: break-word;
-  margin-left: 3%;
+  margin-left: 5%;
   margin-bottom: 3%;
   font-size: 3em;
 }
@@ -86,4 +86,10 @@ textarea {
   font-size: 20px;
   word-wrap: break-word;
   margin: 0 1% 0 1%;
+}
+
+.selector {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5%;
 }

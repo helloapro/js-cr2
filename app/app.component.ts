@@ -8,12 +8,6 @@ import { Meal } from './meal.model';
     <div class="jumbotron jumboimage">
       <h1 class="jumboheader">Meal Tracker - Meal Hacker</h1>
       <p class="jumbotext">"Ultimately, the most efficient way to live is like a snake - eat sparingly, do very little, & strike when the time is right..." ~ Confucius</p>
-      <div>
-        <meal-filter
-          [childTypeList]="allTypes"
-          (caloriesTypeSender)="selectCalories($event)"
-        ></meal-filter>
-      </div>
     </div>
     <div class="row">
       <div class="col-sm-3 well fruit">
@@ -23,6 +17,12 @@ import { Meal } from './meal.model';
       </div>
       <div class="col-sm-6">
         <h1 class="entry-header">Your entries</h1>
+        <div>
+          <meal-filter
+            [childTypeList]="allTypes"
+            (caloriesTypeSender)="selectCalories($event)"
+          ></meal-filter>
+        </div>
         <meal-list
           [childMealList] = "allMeals"
           (clickEditMealSender) = "editMeal($event)"

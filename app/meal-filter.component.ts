@@ -5,7 +5,7 @@ import { MealComponent } from './meal.component';
 @Component({
   selector: 'meal-filter',
   template: `
-    <select class="form-control" (change)="caloriesChange($event.target.value)">
+    <select class="form-control selector" (change)="caloriesChange($event.target.value)">
       <option *ngFor="let type of childTypeList" [value]="type">{{type}}</option>
     </select>
   `
