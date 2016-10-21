@@ -16,7 +16,7 @@ import { Meal } from './meal.model';
         ></add-meal>
       </div>
       <div class="col-sm-6">
-        <h2 class="entry-header">Your entries</h2>
+        <h1 class="entry-header">Your entries</h1>
         <meal-list
           [childMealList] = "allMeals"
           (clickEditMealSender) = "editMeal($event)"

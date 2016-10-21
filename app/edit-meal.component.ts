@@ -16,7 +16,7 @@ import { Meal } from './meal.model';
             <label>What you ate:</label>
             <input class="form-control" [(ngModel)]="childSelectedMeal.name">
             <label>Notes:</label>
-            <input class="form-control" [(ngModel)]="childSelectedMeal.details">
+            <textarea class="form-control" [(ngModel)]="childSelectedMeal.details"></textarea>
             <label>Number of calories:</label>
             <input class="form-control" type="number" [(ngModel)]="childSelectedMeal.calories">
           </div>

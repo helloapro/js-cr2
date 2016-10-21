@@ -42,7 +42,7 @@ body {
 .fruit {
   background: url("../../resources/img/fruit.jpeg");
   background-size: contain;
-  height: 69em;
+  height: 41em;
 }
 
 .fruit-text {
@@ -53,10 +53,14 @@ body {
   word-wrap: break-word;
 }
 
+textarea {
+  resize: vertical;
+}
+
 .cupcake {
   background: url("../../resources/img/cupcake.jpg");
   background-size: contain;
-  height: 69em;
+  height: 41em;
 }
 
 .cupcake-text, .fruit-header {
@@ -71,6 +75,9 @@ body {
   font-family: 'Shrikhand', sans-serif;
   text-shadow: 3px 3px white;
   word-wrap: break-word;
+  margin-left: 3%;
+  margin-bottom: 3%;
+  font-size: 3em;
 }
 
 .entry-text {
@@ -78,4 +85,5 @@ body {
   font-family: 'Concert One', sans-serif;
   font-size: 20px;
   word-wrap: break-word;
+  margin: 0 1% 0 1%;
 }

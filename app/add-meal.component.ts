@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
       <label class="fruit-text">What did you eat?</label>
       <input class="form-control" #mealName>
       <label class="fruit-text">Notes:</label>
-      <input class="form-control" #mealDetails>
+      <textarea class="form-control" #mealDetails></textarea>
       <label class="fruit-text">Number of calories:</label>
       <input class="form-control" type="number" #mealCalories>
       <hr>
