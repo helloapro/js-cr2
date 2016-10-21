@@ -8,6 +8,8 @@ import { MealComponent } from './meal.component';
     <div *ngFor="let meal of childMealList">
       <meal-display
         [meal] = "meal"
+        [childSelectedMeal] = "childSelectedMeal"
+        (editDoneSender) = "editDone()"
       ></meal-display>
       <br>
     </div>
@@ -16,4 +18,10 @@ import { MealComponent } from './meal.component';
 
 export class MealListComponent {
   @Input() childMealList: Meal[];
+  @Input() childSelectedMeal: Meal;
+  @Output() editDoneSender = new EventEmitter();
+
+  editDone() {
+    this.editDoneSender.emit();
+  }
 }

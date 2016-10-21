@@ -13,6 +13,8 @@ import { Meal } from './meal.model';
       <div class="col-sm-3 well">
         <meal-list
           [childMealList] = "allMeals"
+          (clickEditMealSender) = "editMeal($event)"
+          [childSelectedMeal] = "selectedMeal"
         ></meal-list>
       </div>
       <div class="col-sm-6 well add">
@@ -37,6 +39,11 @@ export class AppComponent {
 
   addMeal(addedMeal: Meal) {
     this.allMeals.push(addedMeal);
+  }
+
+  selectedMeal: Meal = null;
+  editMeal(mealToEdit: Meal) {
+    this.selectedMeal = mealToEdit;
   }
 
 }
