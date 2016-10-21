@@ -5,9 +5,9 @@ import { Meal } from './meal.model';
   selector: 'edit-meal',
   template: `
     <!-- Modal (button in meal component)-->
-    <div *ngIf="childSelectedMeal" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div *ngIf="childSelectedMeal" class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myModalLabel">Edit {{ childSelectedMeal.name }}</h4>
@@ -31,7 +31,7 @@ import { Meal } from './meal.model';
 })
 
 export class EditMealComponent {
-  @Input() childSelectedMeal: Meal[];
+  @Input() childSelectedMeal: Meal;
   @Output() editDoneSender = new EventEmitter();
 
   editDone() {

@@ -9,6 +9,7 @@ import { MealComponent } from './meal.component';
       <meal-display
         [meal] = "meal"
         [childSelectedMeal] = "childSelectedMeal"
+        (clickEditMealSender) = "editMeal($event)"
         (editDoneSender) = "editDone()"
       ></meal-display>
       <br>
@@ -18,8 +19,13 @@ import { MealComponent } from './meal.component';
 
 export class MealListComponent {
   @Input() childMealList: Meal[];
-  @Input() childSelectedMeal: Meal;
+  @Input() childSelectedMeal: Meal[];
+  @Output() clickEditMealSender = new EventEmitter();
   @Output() editDoneSender = new EventEmitter();
+
+  editMeal(mealToEdit: Meal) {
+    this.clickEditMealSender.emit(mealToEdit)
+  }
 
   editDone() {
     this.editDoneSender.emit();

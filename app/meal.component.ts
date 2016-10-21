@@ -26,7 +26,7 @@ import { EditMealComponent } from './edit-meal.component';
 export class MealComponent {
   public meal: Meal;
   @Output() clickEditMealSender = new EventEmitter();
-  @Input() childSelectedMeal: Meal;
+  @Input() childSelectedMeal: Meal[];
   @Output() editDoneSender = new EventEmitter();
 
   editMeal(mealToEdit: Meal) {
